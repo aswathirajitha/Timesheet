@@ -1,0 +1,36 @@
+{
+  "adduser": [
+    {
+      "id": "1",
+      "name": "Amala",
+      "Department": "cs"
+    },
+    {
+      "id": "2",
+      "name": "Aswathi K K",
+      "Department": "IT"
+    },
+    {
+      "id": "3",
+      "name": "ATHIRA",
+      "Department": "CS"
+    },
+    {
+      "id": "4",
+      "name": "RAJITHA",
+      "Department": "CS"
+    }
+  ],
+  "addtask": [
+    {
+      "id": "1",
+      "name": "Amala",
+      "Department": "cs"
+    },
+    {
+      "id": "3",
+      "name": "ATHIRA",
+      "Department": "CS"
+    }
+  ]
+}

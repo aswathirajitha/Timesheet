@@ -1,0 +1,86 @@
+<section class="vh-100">
+   
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col">
+          <div class="card" id="list1" style="border-radius: .75rem; background-color: #eff1f2;">
+            <div class="card-body py-4 px-4 px-md-5">
+  
+              <p class="h1 text-center mt-3 mb-4 pb-3 text-primary">
+                <u>Add new User</u>
+              </p>
+  
+              <div class="pb-2">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex flex-row align-items-center">
+                      <input type="text" class="form-control form-control-lg" id="exampleFormControlInput1"
+                        placeholder="User id" name="id" [(ngModel)]="adddetails.id">
+                        <input type="text" class="form-control form-control-lg" id="exampleFormControlInput1"
+                        placeholder="User name" name="name" [(ngModel)]="adddetails.name">
+                        <input type="text" class="form-control form-control-lg" id="exampleFormControlInput1"
+                        placeholder="Department" name="Department" [(ngModel)]="adddetails.Department" >
+                       <div>
+                        <button type="button" class="btn btn-primary" (click)="add()">Add</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <section class="vh-100" style="background-color: #eee;">
+                <div class="container py-5 h-100">
+                  <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-md-12 col-xl-10">
+              
+                      <div class="card" >
+                        <div class="card-header p-3">
+                          <h5 class="mb-0"><i class="fa fa-user-plus">  User list</i></h5>
+                        </div>
+                        <div class="card-body" data-mdb-perfect-scrollbar="true" style="position: relative; height: 400px">
+              
+                          <table class="table mb-0">
+                            <thead>
+                              <tr>
+                                <th scope="col">User id</th>
+                                <th scope="col">User Name</th>
+                                <th scope="col">Department</th>
+                                
+                              </tr>
+                            </thead>
+                            <tbody>
+
+                            
+                              <tr class="fw-normal" *ngFor = "let item of user">
+                                <th class="border-0">
+                                  <span class="ms-2">{{item.id}}</span>
+                                
+                                </th>
+                                <th class="border-0">
+                                  <span class="ms-2">{{item.name}}</span>
+                                </th>
+                                <th class="border-0">
+                                  <span class="ms-2">{{item.Department}}</span>
+                                </th>
+              
+        
+                              </tr>
+
+                            </tbody>
+                          </table>
+              
+                        </div>   
+                      </div>
+              
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+  
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+  </section>

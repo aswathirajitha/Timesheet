@@ -1,0 +1,59 @@
+<div class="text-center pt-3 pb-2">
+    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-todo-list/check1.webp"
+      alt="Check" width="60">
+    <h2 class="my-4">Task List</h2>
+  </div>
+<section class="vh-100" >
+   
+        
+            <div class="card-header ">
+              <h5 class="mb-0"><i class="fa fa-th-list">  TASK list</i></h5>
+            </div>
+            
+              <table class="table mb-0">
+                <thead>
+                  <tr>
+                    <th scope="col">User id</th>
+                    <th scope="col">User Name</th>
+                    <th scope="col">Department</th>
+                    <th scope="col">Task</th>
+                    <th scope="col">priority</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+
+                
+                  <tr class="fw-normal" *ngFor = "let item of user">
+                    <th class="border-0">
+                      <span class="ms-2">{{item.id}}</span>                   
+                    </th>
+                    <th class="border-0">
+                      <span class="ms-2">{{item.name}}</span>
+                    </th>
+                    <th class="border-0">
+                      <span class="ms-2">{{item.Department}}</span>
+                    </th>
+                    <th class="border-0">
+                        <div class="search-container">
+                            <input type="text" name="search" placeholder="add task..." class="search-input">
+                            <a href="#" class="search-btn">
+                              <i class="fa fa-plus-circle" style="font-size:30px;"(click)="task(item)"></i>      
+                            </a>
+                        </div>
+                    </th>
+                    <th class="border-0">
+                      <form>
+                          <input type="radio" id="High" name="fav_language" value="High">
+                          <label for="High" style="color:red;">High</label>
+                          <input type="radio" id="Low" name="fav_language" value="Low">
+                          <label for="Low" style="color:rgba(0, 255, 21, 0.801);">Low</label>
+                        </form> 
+                    </th>
+                  </tr>
+
+                </tbody>
+              </table>
+           
+  </section>
+
