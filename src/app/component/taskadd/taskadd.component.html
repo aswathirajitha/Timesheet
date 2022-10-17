@@ -26,30 +26,35 @@
                 
                   <tr class="fw-normal" *ngFor = "let item of user">
                     <th class="border-0">
-                      <span class="ms-2">{{item.id}}</span>                   
+                      <input   value="{{item.id}}" name="id"  [(ngModel)]="item.id">
+                      <!-- <p class="ms-2" value="{{item.id}}" name="id"  [(ngModel)]="addtask.id">{{item.id}}</p>                    -->
                     </th>
                     <th class="border-0">
+                      <input [(ngModel)]="addtask.name"   value="{{item.name}}" name="name" >
                       <span class="ms-2">{{item.name}}</span>
                     </th>
                     <th class="border-0">
+                      <input [(ngModel)]="addtask.Department"  value="{{item.Department}}" name="Department" >
                       <span class="ms-2">{{item.Department}}</span>
                     </th>
                     <th class="border-0">
                         <div class="search-container">
-                            <input type="text" name="search" placeholder="add task..." class="search-input">
+                            <input type="text" name="task" placeholder="add task..." class="search-input" [(ngModel)]="addtask.task">
                             <a href="#" class="search-btn">
-                              <i class="fa fa-plus-circle" style="font-size:30px;"(click)="task(item)"></i>      
+                              <i class="fa fa-plus-circle" style="font-size:30px;"(click)="task()"></i>      
                             </a>
                         </div>
                     </th>
-                    <th class="border-0">
+
+                    <!-- <th class="border-0">
                       <form>
                           <input type="radio" id="High" name="fav_language" value="High">
                           <label for="High" style="color:red;">High</label>
                           <input type="radio" id="Low" name="fav_language" value="Low">
                           <label for="Low" style="color:rgba(0, 255, 21, 0.801);">Low</label>
                         </form> 
-                    </th>
+                    </th> -->
+
                   </tr>
 
                 </tbody>

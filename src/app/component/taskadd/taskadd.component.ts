@@ -9,12 +9,17 @@ import { ServiceService } from 'src/app/service.service';
 export class TaskaddComponent implements OnInit {
   
   user :any=[];
-
   constructor(private api:ServiceService) { }
 
+  addtask={
+    id:0,
+    name:"",
+    Department:"",
+    task:""
+  }
   
-  task(item :any){
-    this.api.addtask(item) 
+  task(){
+    this.api.addtask(this.addtask) 
   }
 
   

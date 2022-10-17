@@ -29,7 +29,7 @@ export class ServiceService {
    }
 
 
-   addtask(item :any){
+   addtask(item :{id:number,name:string,Department:string,task:string}){
     this.http.post(`${this.url1}`,item).subscribe(
       data => {
         console.log('POST Request is successful ', data);
